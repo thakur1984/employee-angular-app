@@ -1,0 +1,68 @@
+<div class="panel">
+<div class="panel-body">
+<div clss="panel-heading"><h4>List Of Employees</h4>
+	</div>
+
+<i ng-hide="employees.length > 0">No data available...</i> 
+<div class="document-list-header">
+<div class="row list-row" ng-show="employees.length > 0">
+	<div class="col-sm-1 ">
+		Sr.No
+	</div>
+	<div class="col-sm-2 ">
+		First Name
+	</div>
+	<div class="col-sm-2 ">
+		Last Name
+	</div>
+	<div class="col-sm-1 ">
+		Team
+	</div>
+	<div class="col-sm-2 ">
+		Area
+	</div>
+	<div class="col-sm-1 ">
+		Title
+	</div>
+	<div class="col-sm-1 ">
+		DOJ
+	</div>
+	<div class="col-sm-2 ">
+		Actions
+	</div>
+	</div>
+</div>
+	
+	<div class="document-list">
+	<div class="list-row row" ng-repeat="employee in employees">
+		<div class="col-sm-1 ">
+			{{employee.Sno}}
+		</div>
+		<div class="col-sm-2 ">
+			{{employee.FirstName}}
+		</div>
+		<div class="col-sm-2 ">
+			{{employee.LastName}}
+		</div>
+		<div class="col-sm-1 ">
+			{{employee.Team}}
+		</div>
+		<div class="col-sm-2 ">
+			{{employee.Area}}
+		</div>
+		<div class="col-sm-1 ">
+			{{employee.Title}}
+		</div>
+		<div class="col-sm-1 ">
+			{{employee.DateOfJoining | date:'MM/dd/yyyy'}}
+		</div>
+		<div class="col-sm-2 ">
+			
+		     <a class="btn btn-primary" ng-click="empList.editEmployee(employee)">Edit</a>
+			
+			<a class="btn btn-primary" ng-click="empList.deleteEmployee(employee)">Delete</a>
+		</div>
+		</div>
+	</div>
+	</div>
+	</div>

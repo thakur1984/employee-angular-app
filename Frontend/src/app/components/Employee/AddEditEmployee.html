@@ -1,0 +1,19 @@
+<form>
+	<div class="form-group">
+		<label for="FirstName">FirstName</label>
+		<input type="text" class="form-control" ng-model="addEmp.employee.FirstName">
+		<label for="LastName">LastName</label>
+		<input type="text" class="form-control" ng-model="addEmp.employee.LastName">
+		<label for="Team">Team</label>
+		<select class="form-control" ng-model="addEmp.employee.Team" ng-options="item.value as item.name for item in addEmp.teams">
+		</select>
+		<label for="Area">Area</label>
+		<input type="text" class="form-control" ng-model="addEmp.employee.Area">
+		<label for="Title">Title</label>
+		<input type="text" class="form-control" ng-model="addEmp.employee.Title">
+		<label for="DateOfJoining">DateOfJoining</label>
+		<input type="date" class="form-control" ng-model="addEmp.employee.DateOfJoining" >
+	</div>
+	<button type="submit" class="btn btn-primary" ng-click="addEmp.AddEmployee(addEmp.employee)">Submit</button>
+	<button type="submit" class="btn btn-primary" ng-click="addEmp.CancelAddEmployee()">Cancel</button>
+</form>
