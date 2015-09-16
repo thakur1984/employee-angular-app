@@ -6,18 +6,14 @@ angular
 		$stateProvider
 			.state('home', {
 				url: '/',
-				templateUrl: 'app/main/main.html',
-				controller: 'EmployeeController',
-				controllerAs: 'emp'
+				templateUrl: 'home.html',
+				controller: 'employee'
 			});
 
 		$stateProvider
-			.state('Edit', {
-				url: '/Edit',
-				templateUrl: 'app/components/Employee/Employee.html',
-				params: {
-					employee: null
-				}
+			.state('list', {
+				url: '/list',
+				templateUrl: 'list.html'
 			});
 
 

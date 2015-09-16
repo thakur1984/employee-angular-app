@@ -5,25 +5,22 @@
   <title>Example - example-guide-concepts-1-production</title>
  
   <script src="../lib/angular.min.js"></script>
- 
+   <script src="../lib/angular-ui-router.min.js"></script>
+    <script src="module.js"></script>
+   <script src="main.route.js"></script>
+   <script src="employee.controller.js"></script>
 </head>
 <body >
-  <div ng-app>
-    <div>
-    <div ng-show="cost"><b>Cost of infosys share:</b>{{cost}}</div> 
-  </div>
-  <b>share Invoice:</b>
+
+<div ng-app="myAngularApp">
   <div>
-    Quantity: <input type="number" min="0" ng-model="qty">
+    
   </div>
-  <div>
-    Costs: <input type="number" min="0" ng-model="cost">
-  </div>
-  <div ng-show="cost">
-    <b>Total:</b> {{qty * cost | currency}}
-  </div>
-<div>
+  <a ui-sref="home">Home</a>
+  <a ui-sref="list">list</a>
   
+ <div ui-view></div>
+ 
 </div>
 </div>
 </body>

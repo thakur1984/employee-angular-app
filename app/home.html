@@ -1,0 +1,36 @@
+<div>
+home page
+<button ng-click="addEmployee()">add employee</button>
+<input type="text"  ng-model="employee.eName"/></input>
+<input type="text"  ng-model="employee.designation"/></input>
+	<!--<div>
+		<emp>Emp Name : {{employee.eName}}</emp>
+	</div>
+	<div>
+		<emp>Designation : {{employee.designation}}</emp>
+	</div>
+	<div ng-show="employee.salary">
+		Salary of Employee:{{employee.salary}}
+	</div>
+
+	<div>salary hike: <input type="text"  ng-model="employee.salary"/></div>
+		<div>
+		<input type="button" ng-click="hikeSalary()" value="salary hike"/></input>
+		</div>
+	<div ng-repeat="sl in salaryHike">
+		<div>
+			<emp>{{sl}}</emp>
+		</div>
+	</div>-->
+	
+	
+	    <li ng-repeat="emp in employeeList" style="border:dotted">
+			<ul>
+			<div>
+				<emp>Emp Name : {{emp.eName}}</emp>
+				<emp>Designation : {{emp.designation}}</emp>
+			</div>
+			</ul>
+	    </li>
+	
+</div>
